@@ -1,13 +1,13 @@
 import os
 import pandas as pd
 
-src_folder = "xlsSamples"
-out_folder = "raw_data"
+src_folder = "xlsCrossValidate"
+out_folder = "raw_crossvalidate_data"
 
 count_states = {
-    "active": 16,
-    "meditate": 15,
-    "neutral": 15
+    "active": 5,
+    "meditate": 5,
+    "neutral": 5
 }
 
 for state in count_states:
