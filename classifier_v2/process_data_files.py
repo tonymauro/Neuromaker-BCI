@@ -3,7 +3,7 @@ import pandas as pd
 import csv
 
 src_folder = "classifier_v2/data"
-src_num = "4"
+src_num = "8"
 
 def split(filehandler, delimiter=',', row_limit=60, ignored_start=30, num_files=8,
     output_name_template='output_%s.csv', output_path='classifier_v2/data/all_data', keep_headers=True):
@@ -33,7 +33,7 @@ def split(filehandler, delimiter=',', row_limit=60, ignored_start=30, num_files=
          output_path,
          output_name_template % current_piece
     )
-    current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
+    current_out_writer = csv.writer(open(current_out_path, 'w', newline=''), delimiter=delimiter)
     current_limit = row_limit
     if keep_headers:
         headers = next(reader)
@@ -57,7 +57,7 @@ def split(filehandler, delimiter=',', row_limit=60, ignored_start=30, num_files=
                output_path,
                output_name_template  % current_piece
             )
-            current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
+            current_out_writer = csv.writer(open(current_out_path, 'w', newline=''), delimiter=delimiter)
             if keep_headers:
                 current_out_writer.writerow(headers)
         current_out_writer.writerow(row)
