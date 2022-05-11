@@ -2,11 +2,11 @@ import os
 import pandas as pd
 import csv
 
-src_folder = "classifier_v2/data"
-src_num = "8"
+src_folder = "Classifier_V2/data"
+src_num = "4"
 
 def split(filehandler, delimiter=',', row_limit=60, ignored_start=30, num_files=8,
-    output_name_template='output_%s.csv', output_path='classifier_v2/data/all_data', keep_headers=True):
+    output_name_template='output_%s.csv', output_path='Classifier_V2/data/all_data', keep_headers=True):
     """
     Splits a CSV file into multiple pieces.
     
